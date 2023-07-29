@@ -7,20 +7,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: #0a131c;
 }
 img{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: #f2f2f2;
+  background-color: transparent;
+  text-decoration: underline;
+}
 p{
-    color: aqua;
+  color: #f2f2f2;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+h1{
+    color: #f2f2f2;
+}
+h2{
+    color: #f2f2f2;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-size: 30px;
+}
+h3{
+  color: #f2f2f2;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-weight: normal;
 }
 .topnav {
   overflow: hidden;
-  background-color: #0e0e0e;
-  width: 169px;
+  background-color: #0a131c;
+  width: 227px;
   margin: auto;
 }
 
@@ -28,28 +56,33 @@ p{
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 20px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
 }
 
 .topnav a:hover {
-  background-color: #5c5c5c;
-  color: black;
+  background-color: #0a131c;
+  color: rgb(129, 2, 2);
 }
 
 
 .topnav a.active {
-  background-color: #adadad;
-  color: white;
+  background-color: #0a131c;
+  color: #d4ab17;
 }
 </style>
 </head>
 <body>
-    <img src="compucave_custom.png" alt="Logo" style="width:35%;"> 
+    <img src="compucave_custom.png" alt="Logo" style="width:40%;" class="responsive"> 
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
       </div>
+      <hr style="width:55%">
+      <a href="about.html"><h2>Hello, World!</h2></a>
+      <p>29 July, 2023</p>
+      <h3>First post, the about page.</h3>
+      <hr style="width:55%">
 </body>
 </html> 

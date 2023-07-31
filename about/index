@@ -77,7 +77,7 @@ fa-github {
 <body>
     <img src="compucave_custom.png" alt="Logo" style="width:40%;" class="responsive">
     <div class="topnav">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a class="active" href="about.html">About</a>
       </div>
       <hr style="width:55%">

@@ -80,7 +80,7 @@ h3{
         <a href="about.html">About</a>
       </div>
       <hr style="width:55%">
-      <a href="about.html"><h2>Hello, World!</h2></a>
+      <a href="/about"><h2>Hello, World!</h2></a>
       <p>29 July, 2023</p>
       <h3>First post, the about page.</h3>
       <hr style="width:55%">

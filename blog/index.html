@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Terminal Window -->
+    <div id="terminal-box">
+
+        <!-- Terminal Icons -->
+        <div id="terminal-icons">
+            <span class="icon">🟢</span>
+            <span class="icon">🟡</span>
+            <span class="icon">🔴</span>
+        </div>
+
+        <!-- Blog Title with Distortion Effect -->
+        <h1 id="blog-title">blog</h1>
+
+        <!-- Line Separator -->
+        <hr class="separator">
+
+        <!-- Blog Posts List -->
+        <div id="blog-list-box">
+            <ul id="blog-list">
+                <!-- Blog posts will be dynamically added here -->
+                <li>Post 1 - An Introduction to LLMs in Edge IoT</li>
+                <li>Post 2 - The Future of Smart Cities</li>
+                <!-- Add more posts as needed -->
+            </ul>
+        </div>
+
+        <!-- Line Separator -->
+        <hr class="separator">
+
+        <!-- Terminal Interface for Interaction -->
+        <div id="terminal-interface">
+            <div id="terminal-prompt">
+                <span class="prompt-symbol">&gt;</span>
+                <input type="text" id="user-input" placeholder="Type here...">
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Blog - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Boot Sequence -->
+    <div id="boot-sequence">
+        <p id="boot-line-1">Initializing...</p>
+        <p id="boot-line-2" style="display: none;">Checking memory...</p>
+        <p id="boot-line-3" style="display: none;">Boot sequence initiated...</p>
+        <p id="boot-line-4" style="display: none;">Welcome to the Den!</p>
+    </div>
+
+    <!-- Main Content - Terminal Interface -->
+    <div id="terminal-box" style="display: none;">
+        <div id="terminal-text">
+            <img id="terminal-image" src="assets/images/logos/crown_main.png" alt="Crown Logo">
+            <p id="terminal-heading">Navigate Below</p>
+            <div id="terminal-icons">
+                <span class="icon">🟢</span>
+                <span class="icon">🟡</span>
+                <span class="icon">🔴</span>
+            </div>
+            <div id="terminal-prompt">
+                <span class="prompt-symbol">&gt;</span>
+                <input type="text" id="user-input" placeholder="blog about">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

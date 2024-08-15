@@ -1,0 +1,172 @@
+/* General Body Styling */
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Courier', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#terminal-icons {
+    position: absolute;
+    top: -25px;
+    right: 10px;
+}
+
+.icon {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/* Terminal Box for About Page */
+#terminal-box-about {
+    width: 70%;
+    height: 55%;
+    border: 3px solid green;
+    border-top-width: 29px; /* Thicker top border */
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    /* overflow-y: auto; Make the content scrollable */
+}
+
+#terminal-box-about::-webkit-scrollbar {
+    width: 12px;
+}
+
+#terminal-box-about::-webkit-scrollbar-track {
+    background: black;
+}
+
+#terminal-box-about::-webkit-scrollbar-thumb {
+    background-color: green;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+/* Terminal Icons */
+
+
+/* About Content Styling */
+#about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+/* Left-aligned Name, Resume, and About Title */
+#about-text {
+    width: 60%;
+}
+
+#about-text h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+#about-text h2 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#about-text h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.about-heading {
+    text-align: center;
+}
+/* Centered About Paragraph and Social Icons */
+.about-paragraph {
+    margin: 10px 0;
+    font-size: 1em;
+    max-width: 100%; /* Ensure it uses the full width for centering */
+    text-align: center;
+}
+
+#social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#social-icons a {
+    margin: 0 10px;
+}
+
+#social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* About Image Styling */
+#about-image {
+    width: 35%;
+    text-align: right;
+}
+
+#about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Terminal Prompt Styling */
+#terminal-prompt {
+    width: 100%;
+    border-top: 2px solid green;
+    padding: 10px 0;
+    position: relative;
+}
+
+#terminal-input {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.prompt-symbol {
+    color: green;
+    font-family: 'Courier', monospace;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+#about-image img {
+    width: 230px; /* Set the desired width */
+    height: 230px; /* Set the desired height */
+    object-fit: cover; /* This will ensure the image is cropped to fit the dimensions without distortion */
+}
+
+#about-text p {
+    margin-left: auto;
+    margin-left: auto;
+}
+
+#command-line {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: green;
+    font-family: 'Courier', monospace;
+    font-size: 1em;
+    padding-left: 5px;
+    height: 25px;
+}
+
+#command-line::placeholder {
+    color: #007500; /* Lighter shade of green */
+}
+
+#command-line:focus {
+    outline: none;
+}

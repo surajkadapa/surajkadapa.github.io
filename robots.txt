@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://surajkadapa.github.io/sitemap-index.xml

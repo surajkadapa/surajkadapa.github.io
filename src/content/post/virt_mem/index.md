@@ -3,10 +3,9 @@ title: "Virtual Memory Internals: How It Works and Why It Matters"
 description: "This post is an example of how to add a cover/2hero image"
 publishDate: "16 March 2025"
 coverImage:
-  src: "./cover2.png"
+  src: "./cover.jpg"
   alt: "Astro build wallpaper"
 tags: ["memory", "paging", "riscv","sv32"]
-draft: True
 ---
 ## Introduction
 Hey there! I'm Suraj, and I've been working on my own operating system for the RISC-V architecture (more on that in future posts). While I was implementing **virtual memory**, I found the **SV32 paging scheme** particularly interesting. This lead me to explore virtual memory on a deeper level and understand it's internals. This post is an attempt to summarize the information I have learned.
@@ -23,31 +22,38 @@ Before diving into virtual memory, let’s understand **what memory is** and **h
 
 
 
-### **Types of Memory:**
+### **Types of Memory**
 - **Registers** – Small, super-fast, used for CPU operations
 - **Cache** – L1/L2/L3 caches to reduce memory access latency
 - **RAM (Main Memory)** – Where processes run, faster than disk(this is what we are concerned with)
-- **Disk Storage** – Used for swap space when RAM is full
+- **Disk Storage** – A non-volatile storage medium used to store data, files and programs persistently
 
 ### **How Processes Use Memory**
-A process typically has:
-- **Code Segment** – Stores executable code
-- **Heap** – Dynamic memory (malloc/new)
-- **Stack** – Stores function calls, local variables
 
-**Problem:** **Physical memory is limited**, and processes need **isolation**.
+For a process to run, its data must be loaded into the Main Memory (RAM). This is fundamental to how computers work - the CPU constantly fetches data from memory into its registers to perform calculations and execute instructions. When you're multitasking with applications like Spotify streaming music, Microsoft Word processing your document and Firefox displaying web pages simultaneously, all these programs need some portion of your RAM.<br><br>
+But here's where things get interesting: modern computers often run dozens or even hundreds of processes simultaneously, many of which require substantial memory. We should not forget that RAM is limited(around 16 GB in most systems), so how do we allocate memory to these processes? Let's have a look in the subsequent sections.
 
 ---
 
-## 2️⃣ The Problem: Fragmentation & Memory Management
-When processes allocate and free memory, **fragmentation** happens:
+## Memory Allocation Stratigies
+Let us assume that any given moment, we have a list of available block sizes and processes that need to be allocated in the memory. 
+In general, the memory blocks compromise a set of holes(memory blocks that are avilable for processes) of various sizes that are scattered throughout the memory. When a process arrives and needs memory, the system wlll search the set of holes for one that is large enough for this process. This procedure is an instace of the **general dynamic storage allocation problem**. Let's discuss some of the common solutions to this problem
+#### 1. First Fit
+This strategy tells to allocate the first hole that is large enough to accomdate the process. Searching will usually start at the beginning of the set of holes. We stop searching once we find the first free hole that is large enough. The below animation demonstrates the First Fit strategy
 
-### **Types of Fragmentation**
-- **External Fragmentation** – Free memory exists, but is **scattered**
-- **Internal Fragmentation** – Memory is allocated in fixed blocks, leading to waste
+![gif](/first_fit.gif)
 
-### **Solution: Virtual Memory**
-Instead of giving processes **direct physical memory**, the OS provides a **virtual address space**, mapped to physical memory dynamically.
+#### 2. Best Fit
+Here, we allocate the smallest hole that is big enough for the process. Obviosuly, we need to search the entire list of memory blocks to find the smallest hole, unless the list is ordered by size. This will make sure to produce the smallest leftover hole. The animation below demonstrates the Best Fit strategy
+
+![gif](/best_fit.gif)
+
+#### 3. Worst Fit
+Finally, in this strategy we allocate the largest hole that is available in the list. Here too, we should search the entire list. This strategy produces the largest leftover hole. The animation below demonstrates the Worst Fit strategy
+
+
+As we can see from the above animations these strategies suffers from **external fragmentation**. This occurs when processes are loaded and removed from the memory and leave the memory in little broken pieces. External fragmentation exists when there is enough total memory to satisfy the request but the available spaces are not contiguous.
+
 
 ---
 

@@ -54,6 +54,7 @@ Here, we allocate the smallest hole that is big enough for the process. Obviosul
 #### 3. Worst Fit
 Finally, in this strategy we allocate the largest hole that is available in the list. Here too, we should search the entire list. This strategy produces the largest leftover hole. The animation below demonstrates the Worst Fit strategy
 
+![gif](/worst_fit.gif)
 
 As we can see from the above animations these strategies suffers from **external fragmentation**. This occurs when processes are loaded and removed from the memory and leave the memory in little broken pieces. External fragmentation exists when there is enough total memory to satisfy the request but the available spaces are not contiguous.
 

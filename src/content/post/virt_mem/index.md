@@ -23,7 +23,7 @@ Before diving into virtual memory, let’s understand **what memory is** and **h
 
 
 ### **Types of Memory**
-- **Registers** – CPU-internal storage locations (32-64 bits) with near-zero latency access, used for immediate operations, addresses, and instruction pointers
+- **Registers** – CPU-internal storage locations (32-64 bits) with near-zero latency access, used for immediate operations, addresses and instruction pointers
 - **Cache** – Hierarchical SRAM (L1/L2/L3) serving as high-speed buffer between CPU and main memory, operating on temporal/spatial locality principles with access times of 1-60 CPU cycles
 - **RAM (Main Memory)** – DRAM-based volatile storage that holds currently executing processes and their working sets, directly addressable through the MMU and organized in pages for virtual memory management(this is what we are concerned with)
 - **Disk Storage** – Non-volatile persistence layer with highest capacity and latency 

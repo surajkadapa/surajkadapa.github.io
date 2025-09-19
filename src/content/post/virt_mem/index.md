@@ -6,6 +6,7 @@ coverImage:
   src: "./cover.jpg"
   alt: "Image of a Hard Drive"
 tags: ["memory", "paging", "riscv","sv32"]
+draft: true
 ---
 ## Introduction
 Hey there! I’m Suraj! Lately, I’ve been working on my own operating system for the RISC-V architecture (more on that in future posts). While implementing virtual memory, I found the **SV32 paging scheme** pretty fascinating. That got me exploring virtual memory a bit more and I wanted to share some of the interesting things I learned along the way!
